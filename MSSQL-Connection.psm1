@@ -1,13 +1,31 @@
 ﻿<#	
-	===========================================================================
-	 Created with: 	SAPIEN Technologies, Inc., PowerShell Studio 2021 v5.8.196
-	 Created on:   	2022. 10. 03. 21:23
-	 Created by:   	Cservenyi Szabolcs
-	 Organization: 	
-	 Filename:     	MSSQL-Connection.psm1
-	-------------------------------------------------------------------------
-	 Module Name: MSSQL-Connection
-	===========================================================================
+  .Synopsis
+   Connection to MSSQL database.
+
+  .Description
+   The module helps you connect to an MSSQL database and run arbitrary queries.
+
+  .Parameter Username
+   Username required to connect to the database.
+
+  .Parameter Password
+   The password required to connect to the database.
+
+  .Parameter Server
+   The database server address.
+
+  .Parameter DBName
+   The name of the database.
+
+  .Parameter Query
+   The script/query to be run on the database.
+
+  .Parameter Security
+   Setting up an encrypted connection for the database connection.
+   True/False setting. Default setting is False.
+
+  .Example
+   MSSQL-Connection -Username "sa" -Password "P@ssw0rd" -Server "mssql-srv\SQLEXPREE" -DBName "SQLDB" -Security $false -Query "SELECT * FROM SQLTABLE"
 #>
 
 function MSSQL-Connection
