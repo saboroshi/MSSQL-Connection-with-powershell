@@ -25,7 +25,7 @@
    True/False setting. Default setting is False.
 
   .Example
-   
+   MSSQL-TestConnection -Username "sa" -Password "P@ssw0rd" -Server "mssql-srv\SQLEXPREE" -DBName "SQLDB" -Security $false
 #>
 
 function MSSQL-TestConnection
