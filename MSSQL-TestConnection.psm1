@@ -1,16 +1,32 @@
-﻿<#	
-	===========================================================================
-	 Created with: 	SAPIEN Technologies, Inc., PowerShell Studio 2021 v5.8.196
-	 Created on:   	2022. 10. 03. 21:14
-	 Created by:   	Cservenyi Szabolcs
-	 Organization: 	
-	 Filename:     	MSSQL-TestConnection
-	-------------------------------------------------------------------------
-	 Module Name: MSSQL-TestConnection
-	===========================================================================
+﻿<#
+  .Synopsis
+   Connection to MSSQL database.
+
+  .Description
+   The module provides assistance for testing the connection to an MSSQL database.
+
+  .Parameter Username
+   Username required to connect to the database.
+
+  .Parameter Password
+   The password required to connect to the database.
+
+  .Parameter Server
+   The database server address.
+
+  .Parameter DBName
+   The name of the database.
+
+  .Parameter Query
+   The script/query to be run on the database.
+
+  .Parameter Security
+   Setting up an encrypted connection for the database connection.
+   True/False setting. Default setting is False.
+
+  .Example
+   
 #>
-
-
 
 function MSSQL-TestConnection
 {
@@ -20,7 +36,6 @@ function MSSQL-TestConnection
 		$Server = "",
 		$DBName = "",
 		[bool]$Security = $false,
-		$Query = ""
 	)
 	$ErrorActionPreference = 'Stop'
 	try
